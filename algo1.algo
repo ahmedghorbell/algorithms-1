@@ -1,0 +1,46 @@
+//The length of the sentence 
+
+ALGORITHM nb_chr_in_str
+VAR
+    str: STRING := "checkpoint algo numero un.";
+    count : INTEGER :=0;
+BEGIN
+    FOR ( int i = 0; i < str.length(); i++)DO
+        IF (str.charAt[i] != " ") THEN
+        count = count+1 ;
+        END_IF
+    END_FOR
+    Write(count);
+END
+
+//The number of words in the sentence
+
+ALGORITHM nb_world_in_str
+VAR
+    str : STRING := "checkpoint algo numero un.";
+    count : INTEGER := 1; 
+BEGIN
+    FOR i FROM 0 TO str.length DO
+        IF (str[i] == " ") THEN
+        count = count+1;
+        END_IF
+    END_FOR
+    Write(count);
+END
+
+//The number of vowels in the sentence.
+
+ALGORITHM nb_voy_in_str
+VAR
+    str : STRING := "checkpoint algo numero un.";
+    count : INTEGER := 0; 
+
+    BEGIN
+    FOR i FROM 0 TO str.length DO
+        IF (str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" 
+            || str.charAt(i) == "o" || str.charAt(i) == "u" || str.charAt(i) == "y") THEN 
+            count = count + 1;
+        END_IF    
+    END_FOR
+    Write(count);
+END
